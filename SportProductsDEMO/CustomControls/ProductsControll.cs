@@ -8,13 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SportProductsDEMO
+namespace SportProductsDEMO.CustomControls
 {
-    public partial class ProductsForm : Form
-    {
-        public ProductsForm()
-        {
-            InitializeComponent();
-        }
-    }
+	public partial class ProductsControll : UserControl
+	{
+		public ProductsControll()
+		{
+			InitializeComponent();
+		}
+	}
 }

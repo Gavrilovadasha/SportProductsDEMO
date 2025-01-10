@@ -46,24 +46,45 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AvtorizationForm.cs">
+    <Compile Include="CustomControls\ProductsControll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ProductsControll.Designer.cs">
+      <DependentUpon>ProductsControll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AvtorizationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AvtorizationForm.Designer.cs">
+    <Compile Include="Forms\AvtorizationForm.Designer.cs">
       <DependentUpon>AvtorizationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProductsForm.cs">
+    <Compile Include="Classes\DataBaseManager.cs" />
+    <Compile Include="Forms\ProductsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProductsForm.Designer.cs">
+    <Compile Include="Forms\ProductsForm.Designer.cs">
       <DependentUpon>ProductsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Classes\Program.cs" />
+    <Compile Include="Models\Component1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Models\Component1.Designer.cs">
+      <DependentUpon>Component1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AvtorizationForm.resx">
+    <Compile Include="tradeDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tradeDataSet1.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CustomControls\ProductsControll.resx">
+      <DependentUpon>ProductsControll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AvtorizationForm.resx">
       <DependentUpon>AvtorizationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProductsForm.resx">
+    <EmbeddedResource Include="Forms\ProductsForm.resx">
       <DependentUpon>ProductsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -74,6 +95,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -84,9 +106,24 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="tradeDataSet1.xsc">
+      <DependentUpon>tradeDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="tradeDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tradeDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tradeDataSet1.xss">
+      <DependentUpon>tradeDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
